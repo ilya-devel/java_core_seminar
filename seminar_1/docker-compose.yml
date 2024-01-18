@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  homework:
+    build: .
+    volumes:
+      - './docs:/docs'
+      - './out:/out'
+      - './src:/src'
+    command: >
+      sh -c "javac -sourcepath /src -d /out /src/home/Main/Main.java
+      && javadoc -d docs -sourcepath src -cp out -subpackages home
+      && java -classpath out home.Main.Main"

@@ -1,0 +1,9 @@
+FROM bellsoft/liberica-openjdk-alpine:11.0.16.1-1
+
+ADD ./docs /docs
+ADD ./out /out
+ADD ./src /src
+WORKDIR /
+RUN javac -sourcepath /src -d /out /src/home/Main/Main.java
+RUN javadoc -d docs -sourcepath src -cp out -subpackages home
+CMD java -classpath out home.Main.Main
