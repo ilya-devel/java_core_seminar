@@ -1,4 +1,6 @@
 ### DIRS ###
+.idea/
+.devcontainer/
 
 ### FILES ###
 *.class
