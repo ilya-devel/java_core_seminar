@@ -1,6 +1,8 @@
 ### DIRS ###
 .idea/
 .devcontainer/
+out/
+META-INF/
 
 ### FILES ###
 *.class
