@@ -1,6 +1,6 @@
 package homeworks.Organization;
 
-public class Employee {
+public class Employee implements Comparable {
     private String firstName;
     private String surName;
     private String patronymic;
@@ -120,5 +120,11 @@ public class Employee {
     @Override
     public String toString() {
         return "" + this.surName + " " + this.firstName + " " + this.patronymic;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        int result = this.getSalary().compareTo(((Employee) o).getSalary());
+        return result;
     }
 }

@@ -20,4 +20,13 @@ public class HeadManager extends Employee{
             }
         }
     }
+
+
+    public Boolean getIsHead() {
+        return isHead;
+    }
+
+    public void setIsHead(Boolean head) {
+        isHead = head;
+    }
 }
